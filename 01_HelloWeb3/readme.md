@@ -93,5 +93,5 @@ contract HelloWeb3{
 
 ### 中文 Solidity 资料推荐
 
-1. [Solidity中文文档](https://docs.soliditylang.org/zh/v0.8.19/index.html)（官方文档的中文翻译）
+1. [Solidity中文文档](https://docs.soliditylang.org/zh/latest/)（官方文档的中文翻译）
 2. [崔棉大师solidity教程](https://space.bilibili.com/286084162) web3技术教学博主，我看他视频学到了很多
