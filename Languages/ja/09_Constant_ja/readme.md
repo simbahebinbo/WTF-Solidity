@@ -1,4 +1,5 @@
-# WTF Solidity 超シンプル入門: 9. Constant and Immutable （定数と不変）
+# WTF Solidity 超シンプル入門: 9. Constant and Immutable
+# <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>（定数と不変）
 
 最近、Solidity の学習を再開し、詳細を確認しながら「Solidity 超シンプル入門」を作っています。これは初心者向けのガイドで、プログラミングの達人向けの教材ではありません。毎週 1〜3 レッスンのペースで更新していきます。
 
@@ -22,6 +23,7 @@
 
 ``` solidity
     // The constant variable must be initialized when declared and cannot be changed after that
+    //（constant変数は宣言時に初期化され、その後で変更することは出来ない）
     uint256 constant CONSTANT_NUM = 10;
     string constant CONSTANT_STRING = "0xAA";
     bytes constant CONSTANT_BYTES = "WTF";
@@ -34,6 +36,7 @@
 
 ``` solidity
     // The immutable variable can be initialized in the constructor and cannot be changed later
+    //（immutable変数はコントラクターにおいて初期化され、その後で変更することは出来ない）
     uint256 public immutable IMMUTABLE_NUM = 9999999999;
     address public immutable IMMUTABLE_ADDRESS;
     uint256 public immutable IMMUTABLE_BLOCK;
@@ -44,6 +47,7 @@
 
 ``` solidity
     // The immutable variables are initialized with the constructor, that is:
+    //（immutable変数はコンストラクターを用いて初期化されるので、次のようにすることが出来る）
     constructor(){
         IMMUTABLE_ADDRESS = address(this);
         IMMUTABLE_BLOCK = block.number;
@@ -71,7 +75,7 @@
 
    ![9-3.png](./img/9-3.png)
 
-## Summary
+## まとめ
 
 この章では、Solidityにおいてその状態を編集することを制限する２つのキーワードを紹介しました: `constant`と`immutable`です。それらは変更されるべきではない変数を不変のままに維持します。コントラクトのセキュリティーを改善する一方で、`gas`を節約することに役立つでしょう。
 

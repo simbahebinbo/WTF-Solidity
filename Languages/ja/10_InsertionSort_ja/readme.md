@@ -75,9 +75,9 @@ function doWhileTest() public pure returns(uint256){
 この演算子は`if-else`文の代替として頻繁に使用されます。
 
 ```solidity
-// ternary/conditional operator
+// ternary/conditional operator（三項演算子/条件演算子）
 function ternaryTest(uint256 x, uint256 y) public pure returns(uint256){
-    // return the max of x and y
+    // return the max of x and y（xとyの最大値を返す）
     return x >= y ? x: y; 
 }
 ```
@@ -104,7 +104,7 @@ function ternaryTest(uint256 x, uint256 y) public pure returns(uint256){
 それでは、挿入ソートのPythonでの実装を見てみましょう:
 
 ```python
-# Python program for implementation of Insertion Sort
+# Python program for implementation of Insertion Sort（挿入ソートを実装するPythonのプログラミング）
 def insertionSort(arr):
 	for i in range(1, len(arr)):
 		key = arr[i]
@@ -122,7 +122,7 @@ Python版の挿入ソートは9行を要します。`function`や`variables`、�
 たったの９行のコードで出来ます:
 
 ``` solidity
-    // Insertion Sort (Wrong version）
+    // Insertion Sort (Wrong version）（挿入ソート(間違いバージョン)）
     function insertionSortWrong(uint[] memory a) public pure returns(uint[] memory) {
         for (uint i = 1;i < a.length;i++){
             uint temp = a[i];
@@ -150,9 +150,9 @@ Python版の挿入ソートは9行を要します。`function`や`variables`、�
 ですので、`j`が決して負の値を取ることが無いように、我々は`j`に`1`を加える必要があるのです。正確な挿入ソートのsolidityのコードは次のようになります:
 
 ```solidity
-    // Insertion Sort（Correct Version）
+    // Insertion Sort（Correct Version）（挿入ソート(正確なバージョン)）
     function insertionSort(uint[] memory a) public pure returns(uint[] memory) {
-        // note that uint can not take negative value
+        // note that uint can not take negative value（uint型は負の数を取れないことに注意すること）
         for (uint i = 1;i < a.length;i++){
             uint temp = a[i];
             uint j=i;
@@ -170,6 +170,6 @@ Result:
 
    !["Input [2,5,3,1] Output[1,2,3,5]"](https://images.mirror-media.xyz/publication-images/S-i6rwCMeXoi8eNJ0fRdB.png?height=300&width=554)
 
-## Summary
+## まとめ
 
 このレクチャーでは、Solidityにおける制御フローを紹介し、シンプルでありながらバグが発生しやすいソートアルゴリズムを書きました。Solidityはシンプルに見えますが、沢山の罠を抱えています。毎月、スマートコントラクトにある小さなバグが故に、プロジェクトはハッキングされて、何百万ドルもの損失を生んでしまいます。安全なコントラクトを書く為には、Solidityの基礎をマスターし、訓練し続ける必要があるのです。
